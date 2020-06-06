@@ -79,7 +79,3 @@ data "template_file" "cloud-init" {
     boinc_project_id = var.boinc_project_id
   }
 }
-
-variable "boinc_project_id" {
-  description = "Boinc Project id: boinccmd --lookup_account URL email password https://boinc.berkeley.edu/wiki/Boinccmd_tool"
-}
