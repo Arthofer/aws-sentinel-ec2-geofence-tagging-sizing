@@ -13,19 +13,11 @@ resource "random_pet" "server" {
 }
 
 provider "aws" {
-  access_key = var.aws_access_key
-  secret_key = var.aws_secret_key
+  access_key = "AKIAJIGLX7MGJ7MMILEA"
+  secret_key = "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"
 
   #don't change this from us-west-2 :)
   region = "us-west-2"
-}
-
-variable "aws_access_key" {
-  description = "access key"
-}
-
-variable "aws_secret_key" {
-  description = "secret key"
 }
 
 data "aws_ami" "ubuntu" {
