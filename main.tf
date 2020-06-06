@@ -1,7 +1,7 @@
 terraform {
   backend "remote" {
     hostname     = "app.terraform.io"
-    organization = "cdunlap"
+    organization = "space"
 
     workspaces {
       name = "aws-sentinel-demo"
