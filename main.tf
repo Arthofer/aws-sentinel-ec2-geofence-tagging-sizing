@@ -51,15 +51,4 @@ resource "aws_instance" "demo" {
     Owner = "chrisd"
     TTL   = "24hrs"
   }
-  user_data = data.template_file.cloud-init.rendered
-}
-
-output "private_ip" {
-  description = "Private IP of instance"
-  value       = join("", aws_instance.demo.*.private_ip)
-}
-
-output "public_ip" {
-  description = "Public IP of instance (or EIP)"
-  value       = join("", aws_instance.demo.*.public_ip)
 }
