@@ -63,11 +63,3 @@ output "public_ip" {
   description = "Public IP of instance (or EIP)"
   value       = join("", aws_instance.demo.*.public_ip)
 }
-
-data "template_file" "cloud-init" {
-  template = file("cloud-init.tpl")
-
-  vars = {
-    boinc_project_id = var.boinc_project_id
-  }
-}
