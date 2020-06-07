@@ -28,8 +28,7 @@ variable "aws_secret_key" {
   description = "secret key"
 }
 
-variable "ssh_key_name"
-  description = "ssh key"
+variable "ssh_key_name" {
 }
 
 data "aws_ami" "ubuntu" {
