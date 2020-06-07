@@ -13,8 +13,8 @@ resource "random_pet" "server" {
 }
 
 provider "aws" {
-  access_key = "AKIAJIGLX7MGJ7MMILEA"
-  secret_key = "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"
+  access_key = "AKIAJJUBLB6N43T67RMA"
+  secret_key = "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"
 
   #don't change this from us-west-2 :)
   region = "us-west-2"
