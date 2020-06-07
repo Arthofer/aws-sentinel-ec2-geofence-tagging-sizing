@@ -16,6 +16,7 @@ resource "aws_key_pair" "deployer" {
   key_name   = "austindemoSSH"
   public_key = "02001ce6056d38dc5"
   }
+}
 
 provider "aws" {
   access_key = var.aws_access_key
