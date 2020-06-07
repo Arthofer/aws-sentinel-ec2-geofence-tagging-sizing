@@ -28,6 +28,10 @@ variable "aws_secret_key" {
   description = "secret key"
 }
 
+variable "ssh_key_name"
+  description = "ssh key"
+}
+
 data "aws_ami" "ubuntu" {
   most_recent = true
 
