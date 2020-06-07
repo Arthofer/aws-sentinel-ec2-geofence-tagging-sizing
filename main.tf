@@ -58,5 +58,5 @@ resource "aws_instance" "demo" {
     #uncomment this for working, comment out for sentinel policy trigger
     Owner = "chrisd"
     TTL   = "24hrs"
+    }
   }
-  
