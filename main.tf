@@ -28,9 +28,6 @@ variable "aws_secret_key" {
   description = "secret key"
 }
 
-variable "ssh_key_name" {
-}
-
 data "aws_ami" "ubuntu" {
   most_recent = true
 
@@ -54,12 +51,10 @@ resource "aws_instance" "demo" {
    #instance_type = "t2.xlarge"
    instance_type = "t2.micro"
 
-  key_name = var.ssh_key_name
-
   tags = {
     Name = random_pet.server.id
     #uncomment this for working, comment out for sentinel policy trigger
-    Owner = "chrisd"
+    Owner = "austina"
     TTL   = "24hrs"
     }
   }
