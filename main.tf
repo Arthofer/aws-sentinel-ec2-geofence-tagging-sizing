@@ -10,9 +10,6 @@ terraform {
 }
 
 resource "random_pet" "server" {
-resource "aws_key_pair" "deployer"
-  key_name   = "austindemoSSH"
-  public_key = "02001ce6056d38dc5"
 }
 
 resource "aws_key_pair" "deployer"
