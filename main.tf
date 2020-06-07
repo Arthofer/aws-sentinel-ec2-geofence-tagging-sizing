@@ -1,7 +1,7 @@
 terraform {
   backend "remote" {
     hostname     = "app.terraform.io"
-    organization = "cdunlap"
+    organization = "Space"
 
     workspaces {
       name = "aws-sentinel-demo"
@@ -59,30 +59,4 @@ resource "aws_instance" "demo" {
     Owner = "chrisd"
     TTL   = "24hrs"
   }
-  user_data = data.template_file.cloud-init.rendered
-}
-
-output "private_ip" {
-  description = "Private IP of instance"
-  value       = join("", aws_instance.demo.*.private_ip)
-}
-
-output "public_ip" {
-  description = "Public IP of instance (or EIP)"
-  value       = join("", aws_instance.demo.*.public_ip)
-}
-
-data "template_file" "cloud-init" {
-  template = file("cloud-init.tpl")
-
-  vars = {
-    boinc_project_id = var.boinc_project_id
-  }
-}
-
-variable "boinc_project_id" {
-  description = "Boinc Project id: boinccmd --lookup_account URL email password https://boinc.berkeley.edu/wiki/Boinccmd_tool"
-}
-variable "ssh_key_name" {
-  description = "You AWS SSH KeyName"
-}
+  
