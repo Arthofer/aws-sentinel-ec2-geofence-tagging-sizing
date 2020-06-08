@@ -4,7 +4,7 @@ terraform {
     organization = "Space"
 
     workspaces {
-      name = "aws-sentinel-demo"
+      name = "AWS-Sentinel"
     }
   }
 }
