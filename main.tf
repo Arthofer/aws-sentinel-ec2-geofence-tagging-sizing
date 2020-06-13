@@ -17,7 +17,7 @@ provider "aws" {
   secret_key = var.aws_secret_key
 
   #don't change this from us-west-2 :)
-  region = "us-west-1"
+  region = "us-west-2"
 }
 
 variable "aws_access_key" {
